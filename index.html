@@ -6,9 +6,68 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+    </script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-3xl font-bold underline">
+        Hello world!
+    </h1>
+    <form>
+        <h3 class="text-x1 mb-5">User info:</h3>
 
+        <label class="mb-4 block">
+            <span class="block">User name:</span>
+            <input 
+            id="name"
+            class="border-2 border-red-400 focus:outline-yellow-400 rounded"
+            type="text">
+        </label>
+        <label class="mb-4 block">
+            <span class="block">User Image:</span>
+            <input 
+            id="image"
+            class="border-2 border-red-400 focus:outline-yellow-400 rounded"
+            type="url">
+        </label>
+        <label class="mb-4 block">
+            <span class="block">Phone Number:</span>
+            <input 
+            id="phone-number"
+            class="border-2 border-red-400 focus:outline-yellow-400 rounded"
+            type="tel">
+        </label>
+        <label class="mb-4 block">
+            <span class="block">Email:</span>
+            <input 
+            id="email"
+            class="border-2 border-red-400 focus:outline-yellow-400 rounded"
+            type="email">
+        </label>
 
-    <script src="./js/index.js"></script>
+        <button class="border px-4 py-1 rounded hover:bg-purple-800 hover:text-white transition duration-300">
+            Submit
+        </button>
+    </form>
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>
